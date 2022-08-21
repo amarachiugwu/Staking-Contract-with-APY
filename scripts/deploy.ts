@@ -1,12 +1,12 @@
 import { ethers } from "hardhat";
 
 const main = async () => {
-  const StakingFactory = await ethers.getContractFactory("Staking");
-  const stakingJuliet = await StakingFactory.deploy();
+  const Staking = await ethers.getContractFactory("Staking");
+  const staking = await Staking.deploy();
 
-  await stakingJuliet.deployed();
+  await staking.deployed();
 
-  console.log("Staking Contract deployed to:", stakingJuliet.address);
+  console.log("Staking Contract deployed to:", staking.address);
 
   
 
