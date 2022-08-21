@@ -66,7 +66,7 @@ contract Staking is DegenToken {
 
     receive() external payable {}
 
-    function withFromContract(uint _amount) external {
+    function withdrawFromContract(uint _amount) external {
         require(msg.sender == admin, "not owner");
         payable(admin).transfer(_amount);
     }
